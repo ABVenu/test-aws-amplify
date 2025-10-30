@@ -1,0 +1,21 @@
+name: Deploy Static App to Amplify
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Trigger Amplify deployment
+        env:
+          AMPLIFY_WEBHOOK: ${{ secrets.AMPLIFY_WEBHOOK }}
+        run: |
+          echo "Triggering Amplify deployment..."
+          curl -X POST -H "Content-Type: application/json" -d '{}' "$AMPLIFY_WEBHOOK"
