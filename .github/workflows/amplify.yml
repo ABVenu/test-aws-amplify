@@ -18,4 +18,4 @@ jobs:
           AMPLIFY_WEBHOOK: ${{ secrets.AMPLIFY_WEBHOOK }}
         run: |
           echo "Triggering Amplify deployment..."
-          curl -X POST -d {} "https://webhooks.amplify.eu-north-1.amazonaws.com/prod/webhooks?id=c13c3fb1-76a8-42d8-bc43-95977bd6a1d7&token=ibiEMfaL1eNNwhczrJTYp6r1R3i59ciHy7FuzNKps&operation=startbuild" -H "Content-Type:application/json"
+          curl -X POST -d {} "https://webhooks.amplify.eu-north-1.amazonaws.com/prod/webhooks?id=1fe57630-01cf-40ed-8368-15307e82257e&token=eu07UrklAiGOYQ78Y4jqsWuR63EumynP2eoZC9OzqkA&operation=startbuild" -H "Content-Type:application/json"
